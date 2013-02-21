@@ -14,9 +14,6 @@ import javax.persistence.EntityManager;
 public class PaperController {
 
     @Inject
-    @SampleCdi
-    EntityManager entityManager;
-    @Inject
     PaperDao paperDao;
     private Paper instance = new Paper();
 

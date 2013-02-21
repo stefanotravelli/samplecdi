@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<cloudbees-web-app xmlns="http://www.cloudbees.com/xml/webapp/1">
+    <!-- Application ID (formatted CB_ACCOUNT/APPNAME) -->
+    <appid>k70/bobi</appid>
+
+    <resource name="jdbc/samplecdi" auth="Container" type="javax.sql.DataSource">
+        <param name="username" value="${db.username}"/>
+        <param name="password" value="${db.password}"/>
+        <param name="url" value="jdbc:cloudbees://samplecdi"/>
+    </resource>
+
+
+</cloudbees-web-app>

@@ -15,7 +15,7 @@ public class SampleDataSourceConfig implements DataSourceConfig {
     }
 
     public String getJndiResourceName(String connectionId) {
-        return "jdbc/SampleDataSource";
+        return "java:/comp/env/jdbc/samplecdi";
     }
 
     public Properties getConnectionProperties(String connectionId) {

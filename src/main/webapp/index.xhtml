@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/templates/default.xhtml">
+    <ui:define name="content">
+
+        <h:form id="bv">
+            <h2>Paper list</h2>
+
+            <p:dataTable id="table" var="paper" value="#{paperDao.all}">
+                <p:column headerText="Title">
+                    <h:outputText value="#{paper.title}"/>
+                </p:column>
+
+                <p:column headerText="Author">
+                    <h:outputText value="#{paper.author}"/>
+                </p:column>
+
+            </p:dataTable>
+
+
+            <p:panel id="panel" header="New Paper">
+                <p:messages id="messages"/>
+                <h:panelGrid columns="2">
+                    <h:outputLabel for="title" value="Title"/>
+                    <p:inputText id="title" required="true" value="#{paperController.instance.title}"/>
+
+                    <p:outputLabel for="author" value="Author"/>
+                    <p:inputText id="author" required="true" value="#{paperController.instance.author}"/>
+
+                </h:panelGrid>
+            </p:panel>
+
+            <p:commandButton value="Submit" update="table,panel" style="margin-right:20px; margin-top: 20px" action="#{paperController.insert}"/>
+
+        </h:form>
+    </ui:define>
+</ui:composition>

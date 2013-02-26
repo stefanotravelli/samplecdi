@@ -18,7 +18,7 @@
 
  Or
 
- #bees app:deploy -a myappid -P db.password=mydbpassword -P db.password=mydbpassword build/myapp.war
+ #bees app:deploy -a myappid -P db.password=mydbpassword -P db.password=mydbpassword myapp.war
 
 
 

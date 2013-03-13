@@ -7,7 +7,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>JSF and CDI webapp project</name>
+    <name>Cloud4SOA :: SampleCdi</name>
     <description>A starter JSF, CDI and JPA webapp project that targets Servlet containers</description>
 
     <properties>
